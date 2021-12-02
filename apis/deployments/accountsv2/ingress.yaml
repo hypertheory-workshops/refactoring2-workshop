@@ -1,0 +1,23 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
+    nginx.ingress.kubernetes.io/enable-cors: "true"
+    nginx.ingress.kubernetes.io/cors-allow-methods: "GET"
+    nginx.ingress.kubernetes.io/cors-allow-origins: "http://app.hypertheory.com"
+  name: accountsv2-ingress
+  labels:
+    name: accountsv2-ingress
+spec:
+  rules:
+  - host: api.hypertheory.com
+    http:
+      paths:
+      - pathType: Prefix
+        path: /v2/my/account(/|$)(.*)
+        backend:
+          service:
+            name: accounts-api-v2-service
+            port: 
+              number: 80

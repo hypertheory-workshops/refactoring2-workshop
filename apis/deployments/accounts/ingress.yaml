@@ -15,7 +15,7 @@ spec:
     http:
       paths:
       - pathType: Prefix
-        path: /my(/|$)(.*)
+        path: /my/account(/|$)(.*)
         backend:
           service:
             name: accounts-api-service

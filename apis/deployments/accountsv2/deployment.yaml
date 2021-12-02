@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: accounts-api-v2
+spec:
+  selector:
+    matchLabels:
+      app: accounts-api-v2
+  template:
+    metadata:
+      labels:
+        app: accounts-api-v2
+    spec:
+      containers:
+      - name: accounts-api-v2
+        image:  accounts-api-2:v1
+
+        ports:
+        - containerPort: 80

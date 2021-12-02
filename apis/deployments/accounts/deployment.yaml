@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
       - name: accounts-api
-        image: accounts-api:v1
+        image: accounts-api:v3
 
         ports:
         - containerPort: 80

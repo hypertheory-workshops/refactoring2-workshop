@@ -3,18 +3,18 @@
 
 ### Get Account Info
 
-GET http://{{host}}/my/account HTTP/1.1
+GET http://api.hypertheory.com/my/account HTTP/1.1
 
 Accept: application/json
 
 
 ### Get Order History
-GET http://{{host}}/my/order-history HTTP/1.1
+GET http://api.hypertheory.com/my/order-history HTTP/1.1
 Accept: application/json
 
 
 ### GET Topics
-GET http://{{host}}/learning/topics HTTP/1.1
+GET http://api.hypertheory.com/learning/topics HTTP/1.1
 Accept: application/json
 
 ### Add A Topic
@@ -23,5 +23,14 @@ POST http://api.hypertheory.com/learning/topics HTTP/1.1
 Content-Type: application/json
 
 {
-    "description": "A Thing"
+    "description": "Kubernetes"
 }
+
+
+### Try the new version locally
+
+GET http://localhost:8090/order-history HTTP/1.1
+
+### Accounts locally
+
+GET http://localhost:5158/ HTTP/1.1

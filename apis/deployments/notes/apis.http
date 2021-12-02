@@ -1,7 +1,7 @@
 @host=api.hypertheory.com
 ### Get Account Info
 
-GET http://{{host}}/my/account HTTP/1.1
+GET http://localhost:8090 HTTP/1.1
 Accept: application/json
 
 
@@ -13,3 +13,7 @@ Accept: application/json
 ### GET Topics
 GET http://{{host}}/learning/topics HTTP/1.1
 Accept: application/json
+
+
+### Versioned API
+GET http://{{host}}/v2/my/account HTTP/1.2
