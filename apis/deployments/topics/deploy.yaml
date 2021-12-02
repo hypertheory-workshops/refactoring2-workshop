@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: topics-api
+spec:
+  selector:
+    matchLabels:
+      app: topics-api
+  template:
+    metadata:
+      labels:
+        app: topics-api
+    spec:
+      containers:
+      - name: topics-api
+        image: topics-api:v1
+
+        ports:
+        - containerPort: 80

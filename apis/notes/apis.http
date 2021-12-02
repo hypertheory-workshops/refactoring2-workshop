@@ -1,0 +1,14 @@
+### Get Account Info
+
+GET http://api.hypertheory.com/my-account HTTP/1.1
+Accept: application/json
+
+
+### Get Order History
+GET http://api.hypertheory.com/my-account/order-history HTTP/1.1
+Accept: application/json
+
+
+### GET Topics
+GET http://localhost:8090/topics HTTP/1.1
+Accept: application/json

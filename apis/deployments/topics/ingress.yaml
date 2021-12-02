@@ -1,0 +1,23 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
+    nginx.ingress.kubernetes.io/enable-cors: "true"
+    nginx.ingress.kubernetes.io/cors-allow-methods: "GET, POST"
+    nginx.ingress.kubernetes.io/cors-allow-origins: "http://app.hypertheory.com"
+  name: topics-ingress
+  labels:
+    name: topics-ingress
+spec:
+  rules:
+  - host: api.hypertheory.com
+    http:
+      paths:
+      - pathType: Prefix
+        path: /learning(/|$)(.*)
+        backend:
+          service:
+            name: topics-api-service
+            port: 
+              number: 80

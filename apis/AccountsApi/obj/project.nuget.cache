@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "EQoa1vtuGh2PyTId/MKKM/SPQwiwJ4N+ZsabcFIfXtvDh34//Nq9mEfUldxguz01utvTWYlYq6eKK44Xpiff8A==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\enith\\dev\\few300-apis\\AccountsApi\\AccountsApi.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\enith\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.14.0\\microsoft.visualstudio.azure.containers.tools.targets.1.14.0.nupkg.sha512"
+  ],
+  "logs": []
+}
