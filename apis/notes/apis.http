@@ -1,20 +1,20 @@
 @host = "api.hypertheory.com"
-@webGuard = "sksjejkejke"
+
 
 ### Get Account Info
 
-GET http://{{host}}/my-account HTTP/1.1
-Authoriation: {{webGuard}}
+GET http://{{host}}/my/account HTTP/1.1
+
 Accept: application/json
 
 
 ### Get Order History
-GET http://api.hypertheory.com/my-account/order-history HTTP/1.1
+GET http://{{host}}/my/order-history HTTP/1.1
 Accept: application/json
 
 
 ### GET Topics
-GET http://api.hypertheory.com/learning/topics HTTP/1.1
+GET http://{{host}}/learning/topics HTTP/1.1
 Accept: application/json
 
 ### Add A Topic
