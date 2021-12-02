@@ -1,6 +1,10 @@
+@host = "api.hypertheory.com"
+@webGuard = "sksjejkejke"
+
 ### Get Account Info
 
-GET http://api.hypertheory.com/my-account HTTP/1.1
+GET http://{{host}}/my-account HTTP/1.1
+Authoriation: {{webGuard}}
 Accept: application/json
 
 
@@ -10,5 +14,14 @@ Accept: application/json
 
 
 ### GET Topics
-GET http://localhost:8090/topics HTTP/1.1
+GET http://api.hypertheory.com/learning/topics HTTP/1.1
 Accept: application/json
+
+### Add A Topic
+
+POST http://api.hypertheory.com/learning/topics HTTP/1.1
+Content-Type: application/json
+
+{
+    "description": "A Thing"
+}

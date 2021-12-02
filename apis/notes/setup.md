@@ -33,7 +33,9 @@ Add-DnsClientNrptRule -Namespace ".hypertheory.com" -NameServers "$(minikube ip)
 > Note: to remove it after you are done:
 
 ```
-Get-DnsClientNrptRule | Where-Object {$_.Namespace -eq '.hypertheory.com'} | Remove-DnsClientNrptRule -Force; Add-DnsClientNrptRule -Namespace ".hypertheory.com" -NameServers "$(minikube ip)"
+Get-DnsClientNrptRule | Where-Object {$_.Namespace -eq '.hypertheory.com'} | Remove-DnsClientNrptRule -Force; 
+
+Add-DnsClientNrptRule -Namespace ".hypertheory.com" -NameServers "$(minikube ip)"
 ```
 
 ## Add A Namespace For Our App
